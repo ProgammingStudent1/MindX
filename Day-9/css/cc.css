@@ -1,0 +1,27 @@
+#header {
+    position:fixed;
+    top: 0;
+    width:100%;
+    background-color:rgb(0, 204, 255);
+    height:100px;
+    text-align:center;
+}
+
+#logo {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top:12.5px;
+    left:12.5px;    
+}
+ 
+
+#course {
+    background-color:pink;
+    color:green;
+    margin: 0 auto;
+    width:800px;
+    height:600px;
+    margin-top: 100px;
+    text-align:center;
+}

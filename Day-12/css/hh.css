@@ -1,0 +1,14 @@
+#avatar{
+    width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-items: center;
+}
+#avatar:hover{
+    width: 400px;
+    
+}

@@ -213,3 +213,13 @@ a{
   display:flex;
   flex-wrap: nowrap;
 }
+
+.catle {
+  color: grey;
+  font-size: 18px;
+}
+
+.ttit{
+  font-size:40px;
+  font-weight: bold; 
+}

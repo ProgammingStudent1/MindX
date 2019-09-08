@@ -7,18 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" id="myText">
+    <button onclick="Function1()">Xet nam nhuan </button>
     <script>
-        for(var i=0;;i+=1){
-        var a = Number(prompt("check nam nhuan"))    
+        function Function1(){
         if(a<=3000){
+            
             if(a%4==0){
                 
-                alert("nam nhuan")
-                break
             }
         }
-        else continue
+        else{
+        document.getElementById("myText").value ="Nhap lai";    
+        }
     }
+
     </script>
 </body>
 </html>

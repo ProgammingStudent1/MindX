@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>
+       <h1 id="0" onclick="KhiemKoDT('1','Minh la ai', 'red') ">Minh</h1> 
+       <h1 id="1" onclick="KhiemKoDT('2', 'Khoa la ai', 'blue')">Khoa</h1>
+       <h1 id="2" onclick="KhiemKoDT('3', 'Loc bom hang', 'white')">Loc</h1>
+       <h1 id="3" onclick="KhiemKoDT('4', 'Anh Tuan Anh Dep Trai', 'yellow')">Tuan Anh</h1>
+       <h1 id="4" onclick="KhiemKoDT('5', 'Anh Khiemmm', 'white')">Khiem</h1>
+       <h1 id="5" onclick="KhiemKoDT('6', 'Phong Thong Ming', 'black')">Phong</h1>
+       <h1 id="6" onclick="KhiemKoDT('7', 'Hieu ao loi', 'green')">Hieu</h1>
+       <button onclick='snap()'>Snap finger</button>
+    </p>
+    <script>
+        
+        function KhiemKoDT(name, text, color){
+            document.getElementById(name).innerHTML = text;
+            document.getElementById(name).style.color = color;
+        }
+        function snap(){
+        for(;;){
+        
+            var a = Math.floor(Math.random() * 7)
+            var b = Math.floor(Math.random() * 7)
+            var c = Math.floor(Math.random() * 7)
+            var d = Math.floor(Math.random() * 7)
+            document.getElementById(String(a)).style.color = 'white';
+            document.getElementById(String(b)).style.color = 'white';
+            document.getElementById(String(c)).style.color = 'white';
+            document.getElementById(String(d)).style.color = 'white';
+            document.getElementById(String(a)).style.transition = 'all 2s';
+            document.getElementById(String(b)).style.transition = 'all 2s';
+            document.getElementById(String(c)).style.transition = 'all 4s';
+            document.getElementById(String(d)).style.transition = 'all 3s';
+
+        }
+    } 
+
+    </script>
+</body>
+</html>

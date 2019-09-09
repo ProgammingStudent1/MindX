@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <input type='number' id='num1' oninput='func1()'>
+        +
+        <input type='number' id='num2' oninput='func1()'>
+        =
+        <input type='number' id='result'>
+    </p>
+
+    <script>
+        function func1(){
+            var a = document.getElementById('num1').value;
+            var b = document.getElementById('num2').value;
+            document.getElementById('result').value = Number(a)+Number(b)
+        }
+    </script>
+</body>
+</html>

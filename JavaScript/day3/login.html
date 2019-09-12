@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        TK <br>
+    <input id="tk"> <br> <br> <br>
+    mat khau <br>
+    <input id="mk" type="password">   <br> <br>
+    <button onclick="dangnhap()">
+        Dang nhap
+    </button>
+    </p>
+    
+    <script>
+        function dangnhap(){
+            var tk = document.getElementById('tk').value;
+            var mk = document.getElementById('mk').value;
+            var a = 'tk Phong'
+            var b = 'mkPhong123'
+            if(tk==a){
+                if(mk==b){
+                    alert('dang nhap thanh cong')
+                }
+                else{
+                    alert('sai tk hoac mk')
+                }
+            }
+            else{
+                alert('sai tk hoac mk')
+            }
+        }
+    </script>
+</body>
+</html>

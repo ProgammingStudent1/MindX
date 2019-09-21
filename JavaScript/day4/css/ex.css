@@ -1,0 +1,13 @@
+.dot{
+    border-radius: 50%;
+    background-color: gray;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+    margin: 0 20px;
+    display:inline-block;
+}
+.active, .dot:hover{
+    background-color: red;
+}

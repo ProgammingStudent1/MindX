@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="doimau" style="height:500px; width:300px;">
+    <br>
+    <button onclick="gao_o()">
+        Doi mau siu nhan Gao o o o o
+    </button>
+    <script>
+        var a=0
+        function gao_o(){
+            a+=1
+        if(a==1){
+            document.getElementById('doimau').src= "image/sword.png"  
+        }
+        if(a==2){
+            document.getElementById('doimau').src= "image/gun.png"
+        }
+        if(a==3){
+            document.getElementById('doimau').src= "image/bow.png"
+        }
+        if(a==4){
+            document.getElementById('doimau').src= "image/dagger.png"
+        }
+        if(a==5){
+            document.getElementById('doimau').src= "image/drag.jpg"
+            a=0
+        }
+    }
+    </script>
+</body>
+</html>

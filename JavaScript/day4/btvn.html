@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ex.css" type="text/css">
+</head>
+<body style="text-align: center">
+    <img style="height:300px; width: 300px; border: 2px red solid;" id="image">
+    <br>
+    <div style="text-align: center;">
+        <div class="dot" onmouseover="changeImage(1)"></div>
+        <div class="dot" onmouseover="changeImage(2)"></div>
+        <div class="dot" onmouseover="changeImage(3)"></div>
+    </div>
+    <script>
+        
+        function changeImage(a){
+            if(a==1){
+                document.getElementById('image').src = 'image/bow.png'
+            }
+            if(a==2){
+                document.getElementById('image').src = 'image/sword.png'
+            }
+            if(a==3){
+                document.getElementById('image').src = 'image/dagger.png'
+            }
+        }
+    </script>
+</body>
+</html>

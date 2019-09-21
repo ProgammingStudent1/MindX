@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height:200px; width:200px; background: lime; color:white; text-align: center; font-size: 100px">
+    <p id="kim_giay" style="position: absolute; left:6.5%;">
+
+    </p>
+    </div>
+    <button onclick="chaydongho()">
+        Start
+    </button>
+    <script>
+        var a = 0
+        var check = 0
+        function chaydongho(){
+            function dongho(){
+                document.getElementById('kim_giay').innerHTML = a
+                a+=1
+                if(a==60){
+                    a=0
+                }
+            }
+            if(check==0){
+                setInterval(dongho,1000)
+                check+=1
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

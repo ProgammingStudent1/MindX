@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/exa.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: inline-block">
+        <div onmouseover="dropDown()" onmouseout="dropUp()" id='but' style="border: black solid 1px">
+        Hover
+        </div>
+        <div id='dD' style="display: none;" onmouseover="dropDown()" onmouseout="dropUp()">
+            <div id='1' onmouseover="shadow('1')" onmouseout="unShadow('1')">123</div> <br>
+            <div id='2' onmouseover="shadow('2')" onmouseout="unShadow('2')">456</div> <br>
+            <div id='3' onmouseover="shadow('3')" onmouseout="unShadow('3')">789</div> <br>
+        </div>   
+    </div>
+    
+    <script>
+        function dropDown(){
+            document.getElementById('but').style.backgroundColor = 'grey'
+            document.getElementById('dD').style.display = 'block'
+            document.getElementById('dD').style.boxShadow = '2px 2px 2px 2px'    
+        }
+        function dropUp(){
+            document.getElementById('dD').style.display = 'none'
+            document.getElementById('but').style.backgroundColor = 'white'
+        }
+        function shadow(name){
+            document.getElementById(name).style.backgroundColor = 'grey'
+        }
+        function unShadow(name){
+            document.getElementById(name).style.backgroundColor = 'white'
+        }
+    </script>
+</body>
+</html>

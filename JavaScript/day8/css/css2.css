@@ -1,0 +1,33 @@
+body{
+    background-image: url("../img/p.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#inputInfo{
+    border: solid 2px black;
+    border-radius: 10%;
+    background-color: white;
+    height:65%;
+    width: 25%;
+    position: absolute;
+    top: 17.5%;
+    left: 12.5%;
+    text-align: center;
+}
+
+#resultDisplay{
+    border: solid 2px black;
+    border-radius: 10%;
+    background-color: white;
+    height:65%;
+    width: 25%;
+    position: absolute;
+    top:17.5%; 
+    right: 12.5%; 
+    text-align: center
+}
+
+p{
+    font-size: 20px;
+}

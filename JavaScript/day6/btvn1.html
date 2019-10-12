@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="height: 300px; width: 200px; border: black 2px solid; text-align: center">
+        <div style="width: inherit; height:30%">
+            <img style="height:100px; width:200px;" id="teamImage"> 
+            <br> <br> <br> <br> <br> <br> <br>  
+            <input type="text" id="teamName" onkeyup="team()" onclick="dropDown()" onmouseout="dropUp()">
+            <br>
+            <div id='dD' style= "display: none; width:60px;" onmouseover="dropDown()" onmouseout="dropUp()">
+                <div id='1' onmouseover="shadow('1')" onmouseout="unShadow('1')" style="height: 20px; width:100%; font-size: 15px;" onclick="autoTeam('1')">Barcelona</div>
+                <div id='2' onmouseover="shadow('2')" onmouseout="unShadow('2')" style="height: 20px; width:100%; font-size: 15px;" onclick="autoTeam('2')">Real</div> 
+                <div id='3' onmouseover="shadow('3')" onmouseout="unShadow('3')" style="height: 20px; width:100%; font-size: 15px;" onclick="autoTeam('3')">MU</div> 
+            </div> 
+        </div>
+    </div>
+    <div style="height: 300px; width:400px; border: black 2px solid; position:absolute; top:8px; left:210px">
+        <div style="display:inline-block; height: 10px; width: 30%; text-align: center" class="playerName">
+            
+        </div>
+        <div style="display:inline-block; height: 10px; width: 30%; text-align: center" class="playerName">
+            
+        </div>
+        <div style="display:inline-block; height: 10px; width: 30%; text-align: center" class="playerName">
+            
+        </div>
+    </div>
+    <script>
+        function team(){
+           var tea = document.getElementById("teamName").value;
+           var bP = document.getElementsByClassName("playerName")
+        if(tea=="Barcelona"){
+           document.getElementById("teamImage").src = "img/ba.jpg"
+           for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="barcaPlayer"
+           }
+        } 
+        if(tea=="Real"){
+            document.getElementById("teamImage").src = "img/rm.jpg"
+            for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="realMadridPlayer"
+           }
+        }
+        if(tea=="MU"){
+            document.getElementById("teamImage").src = "img/mu.png"
+            for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="muPlayer"
+           }
+        }
+    }
+    function dropDown(){
+            document.getElementById('dD').style.display = 'block'
+            document.getElementById('dD').style.boxShadow = '0 0 1px 1px'    
+        }
+        function dropUp(){
+            document.getElementById('dD').style.display = 'none'
+        }
+        function shadow(name){
+            document.getElementById(name).style.backgroundColor = 'grey'
+        }
+        function unShadow(name){
+            document.getElementById(name).style.backgroundColor = 'white'
+        }
+    function autoTeam(ss){
+        var tea = document.getElementById(ss).innerHTML;
+           var bP = document.getElementsByClassName("playerName")
+        if(tea=="Barcelona"){
+           document.getElementById("teamImage").src = "img/ba.jpg"
+           for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="barcaPlayer"
+           }
+        } 
+        if(tea=="Real"){
+            document.getElementById("teamImage").src = "img/rm.jpg"
+            for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="realMadridPlayer"
+           }
+        }
+        if(tea=="MU"){
+            document.getElementById("teamImage").src = "img/mu.png"
+            for(var i = 0; i<bP.length; i++){
+               bP[i].innerHTML="muPlayer"
+           }
+        }
+    }
+    </script>
+</body>
+</html>

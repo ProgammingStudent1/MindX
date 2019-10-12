@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css2.css" type="text/css">
+</head>
+<body>
+    <div id="inputInfo">
+        <h1>BMI</h1> <br>
+        <h3>Chiều cao</h3>
+        <input type="number" placeholder="Nhập chiều cao" id="inputCc"> <br> <br> 
+        <h3>Cân nặng</h3>
+        <input type="number" placeholder="Nhập cân nặng" id="inputCan"> <br> <br> <br>
+        <button onclick="BMI()">Submit</button>
+    </div>
+    <div id="resultDisplay">
+        <h1>Thông tin chỉ số</h1> 
+        <p> Chiều cao:<p id="cao"></p></p> 
+        <p> Cân nặng:<p id="nang"></p> </p>
+        <p> BMI:<p id="Bmis"></p></p>
+        <p>Tình trạng<p id="status"></p></p>
+    </div>
+    <script>
+        function BMI(){
+            var cc = document.getElementById('inputCc').value;
+            var cn = document.getElementById('inputCan').value;
+            var ca = cc/100
+            if(cc>=100 && cc<=300){
+                if(cn>=10 && cn<=1000){
+                    var BMI = cn/(ca*ca)
+                    document.getElementById('Bmis').innerHTML = Math.round(BMI*100)/100
+                    document.getElementById('cao').innerHTML = ca
+                    document.getElementById('nang').innerHTML = cn+"kg"
+                }
+                else{
+                alert(" Vui lòng nhập lại thông tin chính xác")
+                }
+            }
+            else{
+                alert(" Vui lòng nhập lại thông tin chính xác")
+            }
+            if(BMI<=18.5){
+                document.getElementById('status').innerHTML = "Thiếu cân"
+            }
+            if(BMI>=18.5 && BMI <= 25){
+                document.getElementById('status').innerHTML = "Bình thường"
+            }
+            if(BMI>=25 && BMI <= 30){
+                document.getElementById('status').innerHTML = "Thừa cân"
+            }
+            if(BMI>=30){
+                document.getElementById('status').innerHTML = "Béo phì"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("img/m2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+    <div id="loginUI" style="background-color: grey; opacity: 0.6; height:400px; width:300px;position: absolute; left:38%; top:25%; text-align: center; border-radius: 10%">
+    </div>
+    <div style= "opacity: 1; height:400px; width:300px;position: absolute; left:38%; top:25%; text-align: center">
+
+        <h2>
+            LOGIN
+        </h2>
+        <br>
+        <br>
+        ACCOUNT<br>
+        <input type="text" id="tk" placeholder="Username"><br> <br> <br>
+        PASSWORD<br>
+        <input type="password" id="mk" placeholder="Password"><br> <br>
+        <button onclick="login()">Login</button>
+        <button onclick="register()">Register</button>
+    </div>
+    <script>
+        var a = ["abc123","123abc","a1bc23"]
+        var b = ["123abc","abc123","a1bc23"]
+        var check = 0
+        function login(){
+           var tk = document.getElementById("tk").value;
+           var mk = document.getElementById("mk").value; 
+        for(var i=0;i<a.length;i++){
+            if(tk==a[i] && mk==b[i]){
+                check++
+                alert('Login Succesful!')
+                window.open('https://programmingstudent1.github.io/MindX/Wbste/index.html')
+                break
+            }
+        }
+        if(check==0){
+            alert("WRONG PASSWORD OR NAME")
+        }
+    }
+    function register(){
+        var newtk=prompt("new account")
+        var newmk=prompt("new password")
+        a.push(newtk)
+        b.push(newmk)
+    }
+    </script>
+</body>
+</html>

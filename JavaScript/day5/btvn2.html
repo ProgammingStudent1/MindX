@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id='name' value = ""/>
+    <button onclick="visit()" id='visit'>
+        Submit
+    </button>
+    <script>
+        var a = ["Ronaldo","Messi","Pele"]
+        var b = ["https://en.wikipedia.org/wiki/Cristiano_Ronaldo","https://en.wikipedia.org/wiki/Lionel_Messi","https://en.wikipedia.org/wiki/Pelé"]
+        var check = 0
+        function visit(){
+            var t = document.getElementById('name').value;
+            for(var i =0;i<a.length;i++){
+                if(a[i]==t){
+                    check++
+                    window.open(b[i])
+                    break
+                }
+            }
+            if(check==0){
+                alert('name not found')
+            }
+        }
+    </script>
+</body>
+</html>

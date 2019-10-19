@@ -25,9 +25,14 @@ body{
     position: absolute;
     top:17.5%; 
     right: 12.5%; 
-    text-align: center
+    text-align: center;
+    
 }
 
 p{
     font-size: 20px;
+}
+
+#status{
+    opacity: 300;
 }

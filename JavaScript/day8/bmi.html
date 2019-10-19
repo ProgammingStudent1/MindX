@@ -16,6 +16,7 @@
         <input type="number" placeholder="Nhập cân nặng" id="inputCan"> <br> <br> <br>
         <button onclick="BMI()">Submit</button>
     </div>
+    <div id="animation"> </div>
     <div id="resultDisplay">
         <h1>Thông tin chỉ số</h1> 
         <p> Chiều cao:<p id="cao"></p></p> 
@@ -44,15 +45,22 @@
             }
             if(BMI<=18.5){
                 document.getElementById('status').innerHTML = "Thiếu cân"
+                document.getElementById('status').style.color = "yellow"
             }
             else if(BMI <= 25){
                 document.getElementById('status').innerHTML = "Bình thường"
+                document.getElementById('status').style.color = "green"
+
             }
             else if(BMI <= 30){
                 document.getElementById('status').innerHTML = "Thừa cân"
+                document.getElementById('status').style.color = "lightCoral"
+
             }
             else{
                 document.getElementById('status').innerHTML = "Béo phì"
+                document.getElementById('status').style.color = "red"
+
             }
         }
     </script>

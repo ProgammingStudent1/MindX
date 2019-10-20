@@ -26,13 +26,17 @@ body{
     top:17.5%; 
     right: 12.5%; 
     text-align: center;
-    
+    overflow: hidden;
 }
 
 p{
     font-size: 20px;
 }
 
-#status{
-    opacity: 300;
+#ani{
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    position: absolute;
+    left: -100%;
 }

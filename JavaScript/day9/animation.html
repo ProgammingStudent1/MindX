@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/css.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <button id="anime" onclick="animetion()">Press to activate animation</button>
+    <div id="a1">
+        <div id="a2">
+
+        </div>
+    </div>
+    <script>
+        function animetion(){
+            var a2 = document.getElementById('a2')
+            a2.style.left = "0px"
+            a2.style.transition = "left 2s"
+            function revert(){
+                a2.style.left= "-100px"
+                a2.style.transition = "left 2s"
+            }
+            setTimeout(revert,3000)
+        }
+    </script>
+</body>
+</html>

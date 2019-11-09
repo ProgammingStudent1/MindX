@@ -11,28 +11,28 @@
     <div id="chessBoard">
         <div class="row">
             <div class="cell a black" id="div0_0" onclick="test('div0_0')">
-                <img src="img/bRook.png">
+                <img src="img/bRook.png" id = "div00" alt="">
             </div>
             <div class="cell a white" id="div0_1" onclick="test('div0_1')">
-                <img src="img/bKnight.png">
+                <img src="img/bKnight.png" id = "div01" alt="">
             </div>
             <div class="cell a black" id="div0_2" onclick="test('div0_2')">
-                <img src="img/bBishop.png">
+                <img src="img/bBishop.png" id = "div02" alt="">
             </div>
             <div class="cell a white" id="div0_3" onclick="test('div0_3')">
-                <img src="img/bQueen.png">
+                <img src="img/bQueen.png" id = "div03" alt="">
             </div>
             <div class="cell a black" id="div0_4" onclick="test('div0_4')">
-                <img src="img/bKing.png">
+                <img src="img/bKing.png" id = "div04" alt="">
             </div>
             <div class="cell a white" id="div0_5" onclick="test('div0_5')">
-                <img src="img/bBishop.png">
+                <img src="img/bBishop.png" id = "div05" alt="">
             </div>
             <div class="cell a black" id="div0_6" onclick="test('div0_6')">
-                <img src="img/bKnight.png">
+                <img src="img/bKnight.png" id = "div06" alt="">
             </div>
             <div class="cell a white" id="div0_7" onclick="test('div0_7')">
-                <img src="img/bRook.png">
+                <img src="img/bRook.png" id = "div07" alt="">
             </div>
         </div>
         <div class="row">
@@ -218,89 +218,6 @@
             </div>
         </div>
     </div>
-    <script>
-        var save_src = "";
-        var save_id = "";
-        var check = 0 ;
-        var boardChess=[
-            [2,3,4,5,6,4,3,2],
-            [1,1,1,1,1,1,1,1],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [-1,-1,-1,-1,-1,-1,-1,-1],
-            [-2,-3,-4,-5,-6,-4,-3,-2]
-        ]
-        function return_backgroundcolor(){
-            for(var i=0; i<8; i++){
-                for(var j=0; j<8; j++){
-                    var sum = i+j;
-                    var ss = document.getElementById('div'+i+"_"+j);
-                    if(sum%2==0){
-                       ss.style.backgroundColor = "rgb(236, 236, 236)";
-                    }
-                    else{
-                        ss.style.backgroundColor = "rgb(134, 134, 134)";
-                    }
-                }
-            }
-        }
-        function bPawn(x,y){
-            if(boardChess[x][y]>0){
-                if(x+1<8 && boardChess[x+1][y]==0){
-                    document.getElementById("div"+(x+1)+"_"+y).style.backgroundColor = "green";
-                }
-            }
-        }
-        function wPawn(x,y){
-            if(boardChess[x][y]<0){
-                if(x-1>0 && boardChess[x-1][y]==0){
-                    document.getElementById("div"+(x-1)+"_"+y).style.backgroundColor = "green"
-                }
-            }
-        }
-        function test(id){
-            var id_1 = id.slice(3,id.length);
-            var s = id_1.split('_');
-            var x = Number(s[0]);
-            var y = Number(s[1]);
-            if(check == 0){
-               check = 1;
-               if(boardChess[x][y]==0) return;
-               if(boardChess[x][y]==1){
-                  save_id = 'div'+x+"_"+y;
-                  save_src = document.getElementById('div'+x+y).src;
-                  bPawn(x,y);
-               }
-               if(boardChess[x][y]==-1){
-                  save_id = 'div'+x+"_"+y;
-                  save_src = document.getElementById('div'+x+y).src; 
-                  wPawn(x,y);
-               }
-            }
-            else if(check == 1){
-                save_id = save_id.slice(3,save_id.length);
-                var s_1 = save_id.split("_");
-                var x_1 = Number(s_1[0]);
-                var y_1 = Number(s_1[1]);
-                var ss = document.getElementById(id);
-                var img_next = document.getElementById('div'+x+y);
-                var img_save = document.getElementById('div'+x_1+y_1);
-                if(ss.style.backgroundColor == "green"){
-                    return_backgroundcolor();
-                    img_next.src = save_src
-                    img_save.src = "alt";
-                    boardChess[x][y] = boardChess[x_1][y_1];
-                    boardChess[x_1][y_1] = 0;
-                    check = 0;
-                }
-                else{
-                    return;
-                }
-            }
-
-        }
-    </script>   
+    <script src="script.js"></script>   
 </body>
 </html>

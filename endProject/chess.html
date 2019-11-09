@@ -254,7 +254,7 @@
             }
         }
         function wPawn(x,y){
-            if(boardChess[x][y]>0){
+            if(boardChess[x][y]<0){
                 if(x-1>0 && boardChess[x-1][y]==0){
                     document.getElementById("div"+(x-1)+"_"+y).style.backgroundColor = "green"
                 }

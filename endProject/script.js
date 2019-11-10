@@ -199,6 +199,198 @@
             }
             y = y_save
         }
+        function queen(x,y){
+            var x_save = x;
+            var y_save = y;
+            x = x_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x++;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save
+            y = y_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    y++;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            y = y_save
+            x = x_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x-=1;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save
+            y = y_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    y-=1;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            y = y_save
+             x = x_save+1;
+            y = y_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x++;
+                    y++;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save+1;
+            y = y_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x++
+                    y-=1
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save-1;
+            y = y_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x-=1
+                    y-=1
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            } 
+            x = x_save-1;
+            y = y_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x-=1
+                    y++
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save+1;
+            y = y_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x++;
+                    y++;
+                    count++;
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save+1;
+            y = y_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x++
+                    y-=1
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+            x = x_save-1;
+            y = y_save-1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x-=1
+                    y-=1
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            } 
+            x = x_save-1;
+            y = y_save+1;
+            while(x>=0 && x<8 && y>=0 && y<8){
+                if(boardChess[x][y]==0){
+                    document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    x-=1
+                    y++
+                    count++
+                }
+                else{
+                    if(boardChess[x][y]*boardChess[x_save][y_save]<0){
+                        document.getElementById("div"+x+"_"+y).style.backgroundColor = "green"
+                    }
+                    break
+                }
+            }
+        }
         function test(id){
             var id_1 = id.slice(3,id.length);
             var s = id_1.split('_');
@@ -229,6 +421,12 @@
                    save_src = document.getElementById('div'+x+y).src;
                    rook(x,y);
                }
+               if(boardChess[x][y]==5 || boardChess[x][y]==-5){
+                   save_id = 'div'+x+"_"+y;
+                   save_src = document.getElementById('div'+x+y).src;
+                   queen(x,y)
+               }
+
                if(count !=0){
                    count = 0;
                    check = 1;

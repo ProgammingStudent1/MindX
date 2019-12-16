@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="css/chcss.css" type="text/css">
     <title>Document</title>
 </head>
-<body></body>
+<body>
+    <p id="turnDisplay">
+        White's turn
+    </p>
+    
+    <div id="ui">
+        <img src="img/walpa.png">
+    </div>
     <div id="chessBoard">
         <div class="row">
             <div class="cell a black" id="div0_0" onclick="test('div0_0')">
@@ -218,6 +225,20 @@
             </div>
         </div>
     </div>
+    <div id="promotion">
+            <div class="prmChoose">
+                <img id="proQueen" onclick="prmQueen()">
+            </div>
+            <div class="prmChoose">
+                <img id="proKnight" onclick="prmKnight()">
+            </div>
+            <div class="prmChoose">
+                <img id="proRook" onclick="prmRook()">
+            </div>
+            <div class="prmChoose">
+                <img id="proBishop" onclick="prmBishop()">
+            </div>
+        </div>
     <script src="script.js"></script>   
 </body>
 </html>

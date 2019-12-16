@@ -1,6 +1,7 @@
 #chessBoard{
     display: inline-block;
     justify-content: center;
+    z-index: 2;
 }
 
 
@@ -23,4 +24,28 @@ img{
     height: 100%;
     width: 100%;
     mix-blend-mode: multiply;
+}
+
+#turnDisplay{
+    font-size: 20px;
+    opacity: 1;
+}
+
+body{
+    text-align: center;
+    background-image: url('../img/p.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+button{
+    height: 25px;
+}
+
+#ui{
+    height: 536px;
+    width: 536px;
+    z-index:1;
+    position: absolute;
+    left: 364px;
 }

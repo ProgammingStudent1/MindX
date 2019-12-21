@@ -656,3 +656,8 @@
         document.getElementById("turnDisplay").innerHTML = "Black's turn";
     }
 }
+function play(){
+    var abc = document.getElementById("menu")
+    abc.style.left = "-535px"
+    abc.style.transition = "left 2s"
+}

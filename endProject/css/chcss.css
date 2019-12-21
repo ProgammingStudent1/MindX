@@ -1,7 +1,7 @@
 #chessBoard{
     display: inline-block;
     justify-content: center;
-    z-index: 2;
+    overflow: hidden;
 }
 
 
@@ -33,7 +33,7 @@ img{
 
 body{
     text-align: center;
-    background-image: url('../img/p.jpg');
+    background-image: url('../img/nen.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
 }

@@ -41,11 +41,3 @@ body{
 button{
     height: 25px;
 }
-
-#ui{
-    height: 536px;
-    width: 536px;
-    z-index:1;
-    position: absolute;
-    left: 364px;
-}

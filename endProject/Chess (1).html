@@ -4,20 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/chcss.css" type="text/css">
+    <link rel="stylesheet" href="chcss.css" type="text/css">
     <title>Document</title>
 </head>
 <body>
-    <p id="turnDisplay">
-        White's turn
-    </p>
-<div id="menu">
-    Free Chess Online
-    <div id="play" onclick="play()">
-        PLAY
+    <div id = "menu">
+        Free Chess Online
+        <div id="play_2" onclick = "play_1(1)">
+            New Game
+        </div>
+        <img id = "menuID" src = "img/gamebg.jpg">
+        <div id = "con" onclick = "play_1(2)">Continue</div>
+    </div> 
+    
+    <div id="win">    
+      
     </div>
-    <img id="menuID" src="img/walpa.png">
-</div>
+
+    <div id="promotion">
+        <div class="prmChoose">
+            <img id="proQueen" onclick="prmQueen()">
+        </div>
+        <div class="prmChoose">
+            <img id="proKnight" onclick="prmKnight()">
+        </div>
+        <div class="prmChoose">
+            <img id="proRook" onclick="prmRook()">
+        </div>
+        <div class="prmChoose">
+            <img id="proBishop" onclick="prmBishop()">
+        </div>
+    </div>
+    <div class="lostDisplay" style = "background-color: white;">
+        <div class="lostPieceHolder">
+            <img src="img/bPawn.png" class="lostPiece"><p id="bPawnLost">0</p>
+        </div>
+        <div class="lostPieceHolder">
+            <img src="img/bRook.png" class="lostPiece"><p id="bRookLost">0</p>
+        </div>
+        <div class="lostPieceHolder">
+            <img src="img/bKnight.png" class="lostPiece"><p id="bKnightLost">0</p>
+        </div class="lostPieceHolder">
+        <div class="lostPieceHolder">
+            <img src="img/bBishop.png" class="lostPiece"><p id="bBishopLost">0</p>
+        </div>
+        <div class="lostPieceHolder">
+            <img src="img/bQueen.png" class="lostPiece"><p id="bQueenLost">0</p>
+        </div>
+        <div class="lostPieceHolder">
+            <img src="img/bKing.png" class="lostPiece"><p id="bKingLost">0</p>
+        </div>
+    </div>
     <div id="chessBoard">
         <div class="row">
             <div class="cell a black" id="div0_0" onclick="test('div0_0')">
@@ -228,20 +265,28 @@
             </div>
         </div>
     </div>
-    <div id="promotion">
-            <div class="prmChoose">
-                <img id="proQueen" onclick="prmQueen()">
+    <div class="lostDisplay"  style = "background-color: white;">
+            <div class="lostPieceHolder">
+                <img src="img/wPawn.png" class="lostPiece"><p id="wPawnLost">0</p>
             </div>
-            <div class="prmChoose">
-                <img id="proKnight" onclick="prmKnight()">
+            <div class="lostPieceHolder">
+                <img src="img/wRook.png" class="lostPiece"><p id="wRookLost">0</p>
             </div>
-            <div class="prmChoose">
-                <img id="proRook" onclick="prmRook()">
+            <div class="lostPieceHolder">
+                <img src="img/wKnight.png" class="lostPiece"><p id="wKnightLost">0</p>
+            </div class="lostPieceHolder">
+            <div class="lostPieceHolder">
+                <img src="img/wBishop.png" class="lostPiece"><p id="wBishopLost">0</p>
             </div>
-            <div class="prmChoose">
-                <img id="proBishop" onclick="prmBishop()">
+            <div class="lostPieceHolder">
+                <img src="img/wQueen.png" class="lostPiece"><p id="wQueenLost">0</p>
             </div>
-    </div>
+            <div class="lostPieceHolder">
+                <img src="img/wKing.png" class="lostPiece"><p id="wKingLost">0</p>
+            </div>
+        </div> <br>
+        <button onclick="returnMenu()">Main Menu</button>
+        <button onclick="return_game()"> Reset </button>
     <script src="script.js"></script>   
 </body>
 </html>

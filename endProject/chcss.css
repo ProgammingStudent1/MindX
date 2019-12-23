@@ -1,0 +1,130 @@
+body{
+    text-align: center;
+    background-image: url(img/walpa.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#chessBoard{
+    display: inline-block;
+    justify-content: center;
+    margin: 5px;
+}
+.lostPieceHolder
+{
+    height: 16%;
+}
+.lostDisplay
+{
+    display: inline-block;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 200px;
+    height: 530px;
+    vertical-align: top;
+}
+.lostPiece
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+p
+{
+    margin-left: 25%;
+    display: inline-block;
+    font-family: cursive;
+    font-size: x-large;
+}
+.cell{
+    height: 65px;
+    width: 65px;
+    border: solid black 1px;
+    float: left;
+}
+
+.white{
+    background-color: rgb(134, 134, 134);
+}
+
+.black{
+    background-color: rgb(236, 236, 236);
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+#promotion
+{
+    display: none;
+    position: absolute;
+    left: 40%;
+    background-color: #d1ad49;
+    width: 20%;
+    height: 10%;
+    border: 5px solid black;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 3;
+}
+.prmChoose
+{
+    display: inline-block;
+    width: 20%;
+}
+#menu{
+    background-color: lightblue;
+    height: 570px;
+    width: 965px;
+    position: absolute;
+    z-index: 2;
+    left: 195px;
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#play_2{
+    background-color: red;
+    height: 50px;
+    width: 200px;
+    border: solid green 2px;
+    position: absolute;
+    top: 75%;
+    left: 390px;
+    font-size: 40px;
+}
+
+#menuID{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top:100px ;
+    right: 250px;
+}
+#con{
+    background-color: red;
+    height: 50px;
+    width: 200px;
+    border: solid green 2px;
+    position: absolute;
+    top: 88%;
+    left: 390px;
+    font-size: 40px;
+    display: none;
+}
+
+#win{
+    background-color: lightblue;
+    height: 60px;
+    width: 300px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 530px;
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: none;
+}

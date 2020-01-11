@@ -16,25 +16,31 @@ let classList = [
     }
 ]
 
-    function renderMember(member){
+    function renderMember(member, key){
         let memberName = document.createElement("li");
         let deleteButton = document.createElement("button")
         deleteButton.textContent = "Delete";
+        deleteButton.addEventListener("click", function (){
+            remove(key);
+        });
         memberName.innerHTML = member.name;
         classMemberList.appendChild(memberName);
         memberName.appendChild(deleteButton);
     }
     function refreshList(){
-        classMemberList.innerHTML = ''
+        classMemberList.innerHTML = '';
         for(let a in classList){
-        renderMember(classList[a])
-        console.log(classList[a])
+        renderMember(classList[a], a)
         }
     }
     function addMember(){
         let newMember = {};
         newMember.name = nameInputElement.value;
         classList.push(newMember)
+        refreshList();
+    }
+    function remove(i){
+        classList.splice([i],1);
         refreshList();
     }
     refreshList()

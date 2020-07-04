@@ -41,7 +41,14 @@
     
     <div class="post">
           <input type="file" accept="image/*" id="image-selector" onchange="onImageSelected()">
+          <textarea 
+            id="input-post" 
+            placeholder="Type caption..." 
+            name="post-caption" 
+            required>
+          </textarea>
           <img id="image-preview">
+          <button type="submit" class="btn" onclick="createPost()"> Post </button>
         </div>
 
     <div style="position: fixed; bottom: 0; right: 0;">

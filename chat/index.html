@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="chats/chatScreen.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="friends/friend.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-storage.js"></script>
+  </head>
+  <div id="friend-list"></div>
+  <body>
+    <div style="position: fixed; bottom: 0; right: 290;">
+      <button id="status-on" class="status-button-on" onclick="statusOn()">
+        Active
+      </button>
+      <button id="status-off" class="status-button-off" onclick="statusOff()">
+        Inactive
+      </button>
+    </div>
+    <div id="wrapper">
+      <form class="form-container">
+        <textarea
+          id="input"
+          placeholder="Type message.."
+          name="msg"
+          required
+        ></textarea>
+
+        <button type="button" class="btn" onclick="send()">Send</button>
+        <button type="button" class="btn cancel" onclick="closeChatScreen()">
+          Close
+        </button>
+        
+      </form>
+      <div id="container" class="chat-popup"></div>
+    </div>
+    
+    <div class="post">
+          <input type="file" accept="image/*" id="image-selector" onchange="onImageSelected()">
+          <img id="image-preview">
+        </div>
+
+    <div style="position: fixed; bottom: 0; right: 0;">
+      <button id="open-chat" class="open-button" onclick="openChatScreen()">
+        Chat
+      </button>
+    <script>
+      // Initialize Cloud Firestore through Firebase
+      firebase.initializeApp({
+        apiKey: "AIzaSyCz4T4urrVPEpTa7i7XCCtra_csdMmBEkw",
+        projectId: "funy-chat-a1b25",
+        storageBucket: 'gs://funy-chat-a1b25.appspot.com'
+      });
+      var storage = firebase.storage();
+      var db = firebase.firestore();
+    </script>
+    <script src="post/post.js"></script>
+    <script src="friends/friend.js"></script>
+    <script src="chats/chatScreen.js"></script>
+    <script src="chats/text.js"></script>
+    <script src="utilities/common.js"></script>
+  </body>
+</html>

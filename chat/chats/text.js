@@ -2,23 +2,23 @@ let filter = "";
 var messages = [];
 
 db.collection("message")
-.orderBy("timestamp")
-.onSnapshot(function (querySnapshot) {
-  messages = [];
-  querySnapshot.forEach(function (doc) {
-    messages.push({
-      userId: doc.data().userId,
-      name: doc.data().name,
-      avatar: doc.data().avatar,
-      text: doc.data().text,
-      status: doc.data().status,
-      timestamp: doc.data().timestamp,
+  .orderBy("timestamp")
+  .onSnapshot(function (querySnapshot) {
+    messages = [];
+    querySnapshot.forEach(function (doc) {
+      messages.push({
+        userId: doc.data().userId,
+        name: doc.data().name,
+        avatar: doc.data().avatar,
+        text: doc.data().text,
+        status: doc.data().status,
+        timestamp: doc.data().timestamp,
+      });
     });
+    console.log(messages);
+    renderMessages();
+    window.scrollBy(0, window.innerHeight);
   });
-  console.log(messages);
-  renderMessages();
-  window.scrollBy(0, window.innerHeight)
-});
 
 function renderMessages() {
   var messageElement = "";
@@ -79,7 +79,6 @@ function send() {
     .catch(function (error) {
       console.error("Error adding document: ", error);
     });
+
+  document.querySelector("#input").innerHTML = "";
 }
-
-
-

@@ -17,9 +17,12 @@ db.collection("message")
     });
     console.log(messages);
     renderMessages();
-    window.scrollBy(0, window.innerHeight);
+    gotoBottom("scroller");
   });
-
+function gotoBottom(id) {
+  var element = document.getElementById(id);
+  element.scrollTop = element.scrollHeight - element.clientHeight;
+}
 function renderMessages() {
   var messageElement = "";
   messages.forEach(function (message) {
@@ -43,7 +46,7 @@ function render(message) {
     message.timestamp = message.timestamp.toDate();
   }
   if (message.name == "Phong") {
-    return `<div class="container" style="background-color: goldenrod;">
+    return `<div class="container" style="background-color: rgb(35,35,35); color:white">
   <img src="${message.avatar}">
     <p>${message.text}</p>
     <span class="time-right">${message.name}, ${toDateString(
@@ -51,7 +54,7 @@ function render(message) {
     )} </span>
   </div>`;
   } else {
-    return `<div class="container" style="background-color: lightblue;">
+    return `<div class="container" style="background-color: rgb(35,35,35); color:white">
   <img src="${message.avatar}">
     <p>${message.text}</p>
     <span class="time-right">${message.name}, ${toDateString(
@@ -61,24 +64,31 @@ function render(message) {
   }
 }
 
+function sendOnEnter(e) {
+  if (e.keyCode == 13) {
+    send();
+  }
+}
+
 function send() {
   let text = document.querySelector("#input").value;
+  if (text.trim()) {
+    db.collection("message")
+      .add({
+        text: text,
+        userId: "AKdArdZjNkB9bp3AVvkE",
+        name: "Phong",
+        avatar:
+          "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/cat-home-441939.jpg?h=83a2eac3&itok=RHVSjYLN",
+        timestamp: new Date(),
+      })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
 
-  db.collection("message")
-    .add({
-      text: text,
-      userId: "AKdArdZjNkB9bp3AVvkE",
-      name: "Phong",
-      avatar:
-        "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2018/08/cat-home-441939.jpg?h=83a2eac3&itok=RHVSjYLN",
-      timestamp: new Date(),
-    })
-    .then(function (docRef) {
-      console.log("Document written with ID: ", docRef.id);
-    })
-    .catch(function (error) {
-      console.error("Error adding document: ", error);
-    });
-
-  document.querySelector("#input").innerHTML = "";
+    document.querySelector("#input").value = "";
+  }
 }

@@ -1,78 +1,95 @@
- #wrapper {
-    display: none;
-  }
-  
-  .open-button {
-    background-color: blue;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-  }
-  
-  
-  /* Add styles to the form container */
-  .form-container {
-    width: 900px;
-    padding: 5px;
-    background-color: white;
-    border: 2px solid grey;
-    margin: 0 3px 3px 0;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-  }
-  
-  /* Full-width textarea */
-  .form-container textarea {
-    width: 500px;
-    padding: 15px;
-    border: none;
-    background: #f1f1f1;
-    resize: none;
-    height: 100%;
-  }
-  
-  /* When the textarea gets focus, do something */
-  .form-container textarea:focus {
-    background-color: #ddd;
-    outline: none; 
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-    background-color: #4caf50;
-    color: white;
-    padding: 15px;
-    border: none;
-    cursor: pointer;
-    width: 170px;
-    opacity: 0.8;
-    position: absolute;
-    right: 200px;
-    top: 17px;
-    bottom: 20px;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-    background-color: red;
-    position: absolute;
-    right: 30px;
-    top: 17px;
-    bottom: 20px;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover,
-  .open-button:hover {
-    opacity: 1;
-  }
+#wrapper {
+  position: fixed;
+  right: 20px;
+  border: solid rgb(45, 45, 45) 2px;
+  width: 320px;
+  height: 400px;
+  bottom: 5px;
+  transition: all 1.5s;
+  border-radius: 4px;
+}
 
-  
- 
+#container {
+  padding-bottom: 40px;
+  background-color: rgb(31, 31, 31);
+  padding-top: 30px;
+}
+
+#send-mess-button {
+  color: white;
+  background-color: green;
+  opacity: 0.8;
+  position: absolute;
+  width: 40%;
+  height: 30px;
+  right: 5px;
+  top: 8px;
+  border: none;
+}
+
+#send-mess-button:hover {
+  opacity: 1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  background-color: rgb(31, 31, 31);
+  border-top: rgb(45, 45, 45) solid 2px;
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  position: absolute;
+  top: 7px;
+  border: none;
+  background: rgb(31, 31, 31);
+  resize: none;
+  height: 30px;
+}
+
+#wrapper .header {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  border-bottom: rgb(45, 45, 45) solid 2px;
+  background-color: rgb(45, 45, 45);
+}
+
+#wrapper .header .btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+#wrapper #scroller {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgb(31, 31, 31);
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: rgb(55, 55, 55);
+  outline: none;
+  color: white;
+}
+
+#open-button {
+  color: green;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}

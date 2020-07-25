@@ -1,9 +1,17 @@
+let wrapper = document.getElementById("wrapper");
+
+function clopen() {
+  if (wrapper.style.bottom == "-350px") {
+    openChatScreen();
+  } else {
+    closeChatScreen();
+  }
+}
+
 function closeChatScreen() {
-  document.getElementById("wrapper").style.display = "none";
-  document.getElementById("open-chat").style.display = "block";
+  wrapper.style.bottom = "-350px";
 }
 
 function openChatScreen() {
-  document.getElementById("wrapper").style.display = "block";
-  document.getElementById("open-chat").style.display = "none";
+  wrapper.style.bottom = "5px";
 }

@@ -1,12 +1,10 @@
-
-
 .friendContainer {
-  border: 2px solid #dedede;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 0px 10px;
-  margin: 10px 0;
   position: relative;
-  
+  height: 70px;
+  width: 80px;
+  color: white;
 }
 
 .statusIndicator {
@@ -21,41 +19,44 @@
 .friendContainer img {
   float: left;
   max-width: 60px;
-  width: 100%;
+  width: 40px;
   margin-right: 20px;
+  border-radius: 50%;
+  height: 40px;
 }
 
-
 .status-button-on {
-  background-color: green;
-  color: black;
+  background-color: darkgreen;
+  color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 23px;
-  left: 10px;
+  top: 23px;
+  right: 10px;
   width: 90px;
+  display: none;
 }
 
 .status-button-off {
-  background-color: red;
-  color: black;
+  background-color: darkred;
+  color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 70px;
-  left: 10px;
+  top: 70px;
+  right: 10px;
   width: 90px;
+  display: none;
 }
 
 /* friend-list */
 #friend-list {
   position: fixed;
   left: 0;
+  background-color: rgb(45, 45, 45);
+  border-radius: 4px;
 }
-
-

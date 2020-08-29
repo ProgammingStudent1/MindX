@@ -13,19 +13,23 @@ db.collection("user").onSnapshot(function (querySnapshot) {
 function renderFriend(id, friend) {
   if (friend.status == "online") {
     return `<div id="${id}" class="friendContainer" onclick="onUserSelected(this.id)">
+    <div style="display:flex;">
       <img src="${friend.avatar}">
       <p>${friend.name}</p>
-        <div class="statusIndicator" style="background-color: green">
-        </div>
-      </div>
+    </div>
+    <div class="statusIndicator" style="background-color: green">
+  </div>
+</div>
     `;
   } else {
     return `<div id="${id}" class="friendContainer" onclick="onUserSelected(this.id)">
-      <img src="${friend.avatar}">
-      <p>${friend.name}</p>
-        <div class="statusIndicator" style="background-color: red">
-        </div>
-      </div>
+  <div style="display:flex;">
+    <img src="${friend.avatar}">
+    <p>${friend.name}</p>
+  </div>
+  <div class="statusIndicator" style="background-color: red">
+ </div>
+</div>
     `;
   }
 }

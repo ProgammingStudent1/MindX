@@ -50,25 +50,24 @@
       </form>
     </div>
     <div id="post-wrap">
-      <div id="newsFeed">
-        <div class="post">
-          <textarea
-            id="input-post"
-            placeholder="Type caption..."
-            name="post-caption"
-            required
-          >
-          </textarea>
-          <button type="submit" class="btn" onclick="createPost()">Post</button>
-          <input
-            type="file"
-            accept="image/*"
-            id="image-selector"
-            onchange="onImageSelected()"
-          />
-          <img id="image-preview" />
-        </div>
-      </div>
+      <div class="post">
+        <textarea
+          id="input-post"
+          placeholder="Type caption..."
+          name="post-caption"
+          required
+          onkeydown="upPostOnEnter(event)"
+        >
+        </textarea>
+        <button type="submit" class="btn" onclick="upPost()">Post</button>
+        <input
+          type="file"
+          accept="image/*"
+          id="image-selector"
+          onchange="onImageSelected()"
+        />
+        <img src id="image-preview"/></div>
+     <div id="newsFeed">
     </div>
     <script>
       // Initialize Cloud Firestore through Firebase

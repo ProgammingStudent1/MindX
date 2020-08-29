@@ -45,23 +45,13 @@ function render(message) {
   if (message.timestamp) {
     message.timestamp = message.timestamp.toDate();
   }
-  if (message.name == "Phong") {
-    return `<div class="container" style="background-color: rgb(35,35,35); color:white">
+  return `<div class="container" style="background-color: rgb(35,35,35); color:white">
   <img src="${message.avatar}">
     <p>${message.text}</p>
     <span class="time-right">${message.name}, ${toDateString(
-      message.timestamp
-    )} </span>
+    message.timestamp
+  )} </span>
   </div>`;
-  } else {
-    return `<div class="container" style="background-color: rgb(35,35,35); color:white">
-  <img src="${message.avatar}">
-    <p>${message.text}</p>
-    <span class="time-right">${message.name}, ${toDateString(
-      message.timestamp
-    )} </span>
-  </div>`;
-  }
 }
 
 function sendOnEnter(e) {

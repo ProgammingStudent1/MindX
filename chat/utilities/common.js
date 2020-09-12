@@ -22,3 +22,11 @@ let year = "";
   if(second < 10){second = '0' + second}
   return `${date}-${month}-${year}, ${hour}:${minute}:${second}:${millisecond}` 
 }
+
+function open1(){
+  window.open("aboutus.html")
+}
+
+function open2(){
+  window.open("index.html")
+}

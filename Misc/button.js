@@ -7,6 +7,3 @@ function randomPos(){
     document.getElementById("button").style.top = `${y*multiplier}%`;
 }
 
-function congrats(){
-    alert("Chúc mừng b đã ấn đc nút b giỏi gê")
-}

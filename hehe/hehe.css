@@ -11,13 +11,14 @@
   top: 30%;
   left: 37%;
   z-index: 5;
+  box-shadow: 5px 10px #b3b3b3;
 }
 
 #layer2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: rgb(73, 223, 148);
   border-radius: 4%;
   border: 3px solid black;
   width: 300px;
@@ -26,6 +27,7 @@
   top: 30%;
   left: 37%;
   z-index: 4;
+  box-shadow: 5px 10px #b3b3b3;
 }
 
 #layer3 {
@@ -41,6 +43,7 @@
   top: 30%;
   left: 37%;
   z-index: 3;
+  box-shadow: 5px 10px #b3b3b3;
 }
 
 #layer4 {
@@ -56,6 +59,7 @@
   top: 30%;
   left: 37%;
   z-index: 2;
+  box-shadow: 5px 10px #b3b3b3;
 }
 
 #layer5 {
@@ -71,8 +75,12 @@
   top: 30%;
   left: 37%;
   z-index: 1;
-  font-size: 45px;
-  column-gap: 20px;
+  column-gap: 10px;
+  box-shadow: 5px 10px #b3b3b3;
+}
+
+#largetext{
+  font-size: 35px;
 }
 
 .heart {
@@ -94,3 +102,21 @@
     transform: scale(1);
   }
 }
+
+
+#background{
+  background-image:url("background.jpg");
+  opacity:0;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+  transition: opacity 2s;
+}
+
+
+

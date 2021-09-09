@@ -12,6 +12,7 @@
   left: 37%;
   z-index: 5;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
 }
 
 #layer2 {
@@ -28,6 +29,7 @@
   left: 37%;
   z-index: 4;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
 }
 
 #layer3 {
@@ -44,6 +46,7 @@
   left: 37%;
   z-index: 3;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
 }
 
 #layer4 {
@@ -60,6 +63,7 @@
   left: 37%;
   z-index: 2;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 1;
 }
 
 #layer5 {
@@ -77,6 +81,7 @@
   z-index: 1;
   column-gap: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
 }
 
 #largetext{

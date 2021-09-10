@@ -34,3 +34,18 @@ function hide() {
   }
   count++;
 }
+
+function randomPos(){
+  var x = Math.random();
+  var y = Math.random();
+  var multiplier = Math.floor(Math.random()*101);
+  console.log(multiplier)
+  document.getElementById("No").style.left = `${x*multiplier}%`;
+  document.getElementById("No").style.top = `${y*multiplier}%`;
+};
+
+function Yes(){
+  alert("thế mai mình qua nhà đón cậu đi chơi nhéeeee ><")
+  location.reload();
+  return false;
+}

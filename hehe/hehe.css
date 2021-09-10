@@ -78,7 +78,7 @@
   position: absolute;
   top: 30%;
   left: 37%;
-  z-index: 1;
+  z-index: -1;
   column-gap: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   opacity: 0.8;
@@ -119,9 +119,41 @@
   left:0;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index:-1;
+  z-index:-2;
   transition: opacity 2s;
 }
 
+#Yes{
+  background-color: chartreuse;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4%;
+  border: 1px solid black;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 120px;
+  left: 37%;
+  z-index: 0;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+}
 
+#No{
+  background-color: rgba(252, 64, 7, 0.87);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4%;
+  border: 1px solid black;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  top: 120px;
+  right: 37%;
+  z-index: 0;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+}
 

@@ -3,15 +3,15 @@ let addMemberButton = document.querySelector('#addButton')
 let nameInputElement = document.querySelector('#nameInput')
 let classList = [
     {
-        "name": "Tuan Anh",
+        "name": "A",
         "age": 26
     },
     {
-        "name": "Loc",
+        "name": "B",
         "age": 14
     },
     {
-        "name": "Hieu",
+        "name": "C",
         "age": 14
     }
 ]

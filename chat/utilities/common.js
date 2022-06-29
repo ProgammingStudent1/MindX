@@ -1,11 +1,11 @@
 function toDateString(time) {
 let year = "";
-  let month = "";
-  let date = "";
-  let hour = "";
-  let minute = "";
-  let second = "";
-  let millisecond = "";
+let month = "";
+let date = "";
+let hour = "";
+let minute = "";
+let second = "";
+let millisecond = "";
   if (time && time instanceof Date) {
     year = time.getFullYear()
     month = time.getMonth() + 1

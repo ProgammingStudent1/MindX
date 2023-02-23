@@ -78,8 +78,8 @@ img{
     height: 570px;
     width: 965px;
     position: absolute;
+    left: 9.5%;
     z-index: 2;
-    left: 195px;
     font-size: 50px;
     border: 5px solid black;
     border-radius: 10px;

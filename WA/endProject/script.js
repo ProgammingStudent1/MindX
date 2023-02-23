@@ -118,7 +118,7 @@ function play_1(n){
 function returnMenu(){
     document.getElementById("win").style.display = "none";
     var abc = document.getElementById("menu");
-    abc.style.left = "195px"
+    abc.style.left = "9.5%"
     abc.style.opacity = 1;
     abc.style.transition ="all 1.5s"
     if(first){
